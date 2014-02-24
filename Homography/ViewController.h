@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+
+@property (nonatomic, strong) UIImagePickerController *picker;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (nonatomic, weak) UIView *view1;
+@property (nonatomic, weak) UIView *view2;
+@property (nonatomic, weak) UIView *view3;
+@property (nonatomic, weak) UIView *view4;
+
+- (IBAction)cameraButtonPushed:(id)sender;
+- (IBAction)decideButtonPushed:(id)sender;
 
 @end
